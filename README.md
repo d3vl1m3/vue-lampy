@@ -31,13 +31,13 @@ The 'easiest' way to add your own content to the lamp image is using Docker volu
 The below examples assume the following project layout and that you are running the commands from the 'project root'.
 
 ```
-/ (project root)
-../app/ (your PHP files live here)
-../mysql/ (docker will create this and store your MySQL data here)
+/ (project root. Run the docker shiz here)
+/app/ (your PHP files live here)
+/mysql/ (docker will create this and store your MySQL data here)
 ```
 
 ### **Adding your own content** and **Persisting your MySQL** in to/from a parent directory folder
- 
+
 ```bash
-docker run -i -t -p "80:80" -v $(dirname "${PWD}")/app/:/app -v $(dirname "${PWD}")/mysql:/var/lib/mysql d3vl1m3/vue-lampy:latest
+docker run -i -t -p "80:80" -v ${PWD}/app/:/app -v ${PWD}/mysql:/var/lib/mysql d3vl1m3/vue-lampy:latest
 ```
