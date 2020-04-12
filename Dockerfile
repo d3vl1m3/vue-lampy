@@ -2,7 +2,7 @@ FROM mattrayner/lamp:latest-1804
 
 # Although.. this is probably not needed as it can just be ran in the projects Root direct (
 # ~/CF/app in my case, not ~CF/stack/app
-VOLUME  ["/var/lib/mysql", "/app" ]
+VOLUME  ["/var/lib/mysql:../mysql", "/app:../app" ]
 
 # as this is symfony, let's link the public directory instead
 RUN ln -s /app/public /var/www/html
