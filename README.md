@@ -34,6 +34,7 @@ The below examples assume the following project layout and that you are running 
 / (project root)
 ../app/ (your PHP files live here)
 ../mysql/ (docker will create this and store your MySQL data here)
+../stack/ (this is where to run the docker command from)
 ```
 
 ### **Adding your own content** and **Persisting your MySQL** in to/from a parent directory folder
