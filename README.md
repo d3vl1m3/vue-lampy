@@ -27,7 +27,7 @@ docker push d3vl1m3/vue-lampy:latest
 ### **Adding your own content** and **Persisting your MySQL**
  
 ```bash
-docker run -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql d3vl1m3/vue-lampy:latest
+docker run -i -t -p "80:80" -v ${PWD}/app/:/app -v ${PWD}/mysql:/var/lib/mysql d3vl1m3/vue-lampy:latest
 ```
 
 ## Adding your own content

@@ -1,5 +1,8 @@
 FROM mattrayner/lamp:latest-1804
 
+# as this is symfony, let's link the public directory instead
+RUN mkdir -p /app/public && rm -fr /var/www/html && ln -s /app/public /var/www/html
+
 # Your custom commands
 RUN apt-get update
 
